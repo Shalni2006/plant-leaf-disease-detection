@@ -1,0 +1,10 @@
+# Plant Leaf Disease Detection - Project Dependencies
+flask>=3.0.0
+tensorflow>=2.18.0
+numpy>=1.26.0
+pillow>=10.0.0
+werkzeug>=3.0.0
+gunicorn>=21.2.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+

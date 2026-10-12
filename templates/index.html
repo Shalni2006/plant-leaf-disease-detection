@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Disease Detection | Deep Learning Mini Project</title>
+    <meta name="description" content="Detect plant diseases from leaf photos using deep learning CNN and PlantVillage dataset.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background-decorations">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Navigation / Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon">🌿</div>
+                <div>
+                    <h1 class="brand-title">Plant Leaf Disease Detection</h1>
+                    <p class="brand-subtitle">Deep Learning Computer Vision Diagnostic System</p>
+                </div>
+            </div>
+            <div class="header-badges">
+                <span class="badge badge-accent">TensorFlow 2.21</span>
+                <span class="badge badge-subtle">15 Crop Classes</span>
+                <span class="badge badge-pill">PlantVillage Dataset</span>
+            </div>
+        </header>
+
+        <!-- Educational Disclaimer Banner -->
+        <section class="disclaimer-banner" id="disclaimer-banner" role="alert">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-text">
+                <strong>Educational Mini-Project Notice:</strong> This application uses a custom beginner-level CNN model with an empirical test accuracy of <strong>~49.97%</strong>. Predictions are experimental and must not replace professional agricultural inspection or agronomic advice.
+            </div>
+        </section>
+
+        <!-- Main Workspace -->
+        <main class="workspace-grid">
+            <!-- Left Card: Upload & Sample Picker -->
+            <section class="card upload-card" aria-labelledby="upload-heading">
+                <div class="card-header">
+                    <h2 id="upload-heading" class="card-title">Upload Leaf Image</h2>
+                    <p class="card-desc">Select a plant leaf photo (Tomato, Potato, or Bell Pepper) in JPG or PNG format.</p>
+                </div>
+
+                <!-- Drag & Drop Zone -->
+                <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-label="Upload leaf image by dropping or clicking">
+                    <input type="file" id="file-input" accept=".jpg,.jpeg,.png" class="file-input" aria-hidden="true">
+                    <div class="drop-zone-content" id="drop-content">
+                        <div class="upload-illustration">🍃</div>
+                        <p class="drop-primary-text">Drag & drop your leaf image here</p>
+                        <p class="drop-secondary-text">or <span class="browse-link">browse from your computer</span></p>
+                        <span class="file-limits">Supports JPG, JPEG, PNG (Max 10MB)</span>
+                    </div>
+
+                    <!-- Live Image Preview Inside Drop Zone -->
+                    <div class="image-preview-container" id="preview-container" style="display: none;">
+                        <img id="image-preview" src="" alt="Selected leaf preview" class="image-preview">
+                        <button type="button" class="btn-remove-preview" id="btn-remove-file" title="Remove image">&times;</button>
+                        <span class="preview-filename" id="preview-filename">leaf.jpg</span>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <button type="button" id="btn-analyze" class="btn btn-primary btn-block" disabled>
+                    <span class="btn-text">🔬 Analyze Leaf Condition</span>
+                    <span class="spinner" id="loading-spinner" style="display: none;"></span>
+                </button>
+
+                <!-- Quick Test Samples -->
+                <div class="sample-section">
+                    <span class="sample-label">Or test instantly with pre-loaded samples:</span>
+                    <div class="sample-chips">
+                        <button type="button" class="sample-chip" data-sample="sample_tomato_healthy.jpg">
+                            <span class="sample-emoji">🍅</span> Tomato Healthy
+                        </button>
+                        <button type="button" class="sample-chip" data-sample="sample_tomato_early_blight.jpg">
+                            <span class="sample-emoji">🍂</span> Tomato Early Blight
+                        </button>
+                        <button type="button" class="sample-chip" data-sample="sample_pepper_healthy.jpg">
+                            <span class="sample-emoji">🫑</span> Pepper Healthy
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Card: Diagnosis & Care Recommendations -->
+            <section class="card results-card" aria-labelledby="results-heading">
+                <div class="card-header">
+                    <h2 id="results-heading" class="card-title">Diagnostic Results</h2>
+                    <p class="card-desc">Real-time classification, confidence metric, and prevention guide.</p>
+                </div>
+
+                <!-- Empty State (Shown before prediction) -->
+                <div class="results-empty-state" id="empty-state">
+                    <div class="empty-icon">🌱</div>
+                    <h3 class="empty-title">Awaiting Leaf Upload</h3>
+                    <p class="empty-desc">Upload a leaf photo or pick a sample leaf on the left to view the CNN classification and treatment suggestions.</p>
+                </div>
+
+                <!-- Populated State (Hidden until analysis) -->
+                <div class="results-content" id="results-content" style="display: none;">
+                    <!-- Status Banner -->
+                    <div class="diagnosis-header" id="diagnosis-header">
+                        <div class="condition-badge" id="condition-badge">HEALTHY</div>
+                        <h3 class="predicted-name" id="predicted-name">Tomato Healthy</h3>
+                        <p class="crop-category" id="crop-category">Crop: Tomato</p>
+                    </div>
+
+                    <!-- Confidence Gauge -->
+                    <div class="confidence-container">
+                        <div class="confidence-meta">
+                            <span class="confidence-label">Prediction Confidence</span>
+                            <span class="confidence-value" id="confidence-value">92.4%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill" id="confidence-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Description -->
+                    <div class="info-block" id="description-block">
+                        <h4 class="info-block-title">📋 Leaf Condition Description</h4>
+                        <p class="info-block-body" id="disease-description">Healthy foliage with crisp margins and active photosynthesis.</p>
+                    </div>
+
+                    <!-- Prevention & Care Recommendations -->
+                    <div class="info-block prevention-block">
+                        <h4 class="info-block-title">🛡️ Care & Disease Prevention Steps</h4>
+                        <ul class="prevention-list" id="prevention-list">
+                            <!-- Populated dynamically via JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Top 3 Alternative Candidates -->
+                    <div class="info-block alternatives-block">
+                        <h4 class="info-block-title">📊 Top Candidate Probabilities</h4>
+                        <div class="candidates-list" id="candidates-list">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Result-specific Disclaimer -->
+                    <div class="result-disclaimer">
+                        <span class="disclaimer-mini-icon">ℹ️</span>
+                        <p class="disclaimer-mini-text" id="result-disclaimer-text">
+                            Experimental prediction generated by a lightweight CNN. Always confirm with an agricultural extension officer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- System Architecture Footer -->
+        <footer class="app-footer">
+            <div class="footer-spec">
+                <span>Model: Custom 4-Block CNN with GlobalAveragePooling2D</span>
+                <span class="separator">•</span>
+                <span>Trained on 15 PlantVillage Categories</span>
+                <span class="separator">•</span>
+                <span>Framework: TensorFlow 2.21 & Flask 3.1</span>
+            </div>
+            <p class="footer-copy">Mini Project: Plant Leaf Disease Detection Using Deep Learning</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

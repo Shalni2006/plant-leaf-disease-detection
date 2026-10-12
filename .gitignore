@@ -1,0 +1,29 @@
+# Python Virtual Environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Uploads directory contents except gitkeep
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Model checkpoints or training cache
+*.log
+
+# Large local dataset (not needed in production web deployment)
+dataset/
+.agents/
+
+# Secrets and Local Environment Files
+.env
+.env.*
+*.env
+
+# IDEs and System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

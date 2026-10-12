@@ -1,0 +1,197 @@
+{
+  "Pepper__bell___Bacterial_spot": {
+    "display_name": "Bell Pepper - Bacterial Spot",
+    "crop": "Bell Pepper",
+    "condition": "Diseased",
+    "disease": "Bacterial Spot (Xanthomonas campestris)",
+    "description": "Causes small, water-soaked, dark lesions on leaves that enlarge and turn brown, leading to premature leaf drop and fruit spotting.",
+    "prevention": [
+      "Use certified disease-free seeds and resistant pepper cultivars.",
+      "Apply fixed copper-based bactericides at the earliest sign of infection.",
+      "Avoid overhead sprinkler irrigation; water at the base of the plant.",
+      "Sanitize pruning tools and rotate crops away from solanaceous plants for at least 2 years."
+    ]
+  },
+  "Pepper__bell___healthy": {
+    "display_name": "Bell Pepper - Healthy Leaf",
+    "crop": "Bell Pepper",
+    "condition": "Healthy",
+    "disease": "None (Healthy)",
+    "description": "Leaf exhibits deep green color, smooth foliage, intact margins, and no visible spots or chlorosis.",
+    "prevention": [
+      "Maintain consistent soil moisture without waterlogging.",
+      "Apply balanced N-P-K fertilizer and ensure adequate calcium to prevent blossom end rot.",
+      "Inspect leaves weekly for early signs of aphids or thrips.",
+      "Ensure 6 to 8 hours of daily direct sunlight."
+    ]
+  },
+  "Potato___Early_blight": {
+    "display_name": "Potato - Early Blight",
+    "crop": "Potato",
+    "condition": "Diseased",
+    "disease": "Early Blight (Alternaria solani)",
+    "description": "Characterized by dark brown to black circular lesions on older leaves, often displaying a classic concentric 'target board' or bullseye ring pattern.",
+    "prevention": [
+      "Apply preventative fungicides such as chlorothalonil, mancozeb, or copper compounds.",
+      "Ensure proper plant spacing for air circulation to accelerate leaf drying.",
+      "Avoid overhead irrigation and irrigate in early morning.",
+      "Practice 3-year crop rotation and eradicate solanaceous weeds (nightshade)."
+    ]
+  },
+  "Potato___Late_blight": {
+    "display_name": "Potato - Late Blight",
+    "crop": "Potato",
+    "condition": "Diseased",
+    "disease": "Late Blight (Phytophthora infestans)",
+    "description": "Highly destructive water mold causing large, irregular water-soaked dark lesions with pale green halos, often with white fungal fuzz on leaf undersides in high humidity.",
+    "prevention": [
+      "Plant certified disease-free seed tubers; destroy cull piles before planting.",
+      "Apply protective fungicides (e.g., cymoxanil, dimethomorph, or copper) before cool, wet weather.",
+      "Promptly remove and destroy infected vines to prevent spores from washing into soil tubers.",
+      "Allow at least 2 weeks after vine death before harvesting tubers to minimize skin inoculation."
+    ]
+  },
+  "Potato___healthy": {
+    "display_name": "Potato - Healthy Leaf",
+    "crop": "Potato",
+    "condition": "Healthy",
+    "disease": "None (Healthy)",
+    "description": "Leaflets show vibrant green coloration, firm texture, well-defined veins, and no necrotic lesions or mildew.",
+    "prevention": [
+      "Hill soil regularly around stems to protect growing tubers from greening and pests.",
+      "Maintain even soil moisture throughout the tuber initiation and bulking stages.",
+      "Scout fields twice a week during rainy or humid spells.",
+      "Apply balanced potassium and nitrogen fertilizers as recommended by soil tests."
+    ]
+  },
+  "Tomato_Bacterial_spot": {
+    "display_name": "Tomato - Bacterial Spot",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Bacterial Spot (Xanthomonas vesicatoria)",
+    "description": "Manifests as small, greasy, dark brown angular lesions on leaves, often surrounded by yellow halos. Leaves may turn yellow, scorch, and drop.",
+    "prevention": [
+      "Treat seeds with hot water or buy certified disease-free seedlings.",
+      "Spray copper-based bactericides combined with mancozeb for improved efficacy.",
+      "Do not work in tomato patches when foliage is wet.",
+      "Rotate fields with non-host crops (corn, beans) for at least 2 consecutive seasons."
+    ]
+  },
+  "Tomato_Early_blight": {
+    "display_name": "Tomato - Early Blight",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Early Blight (Alternaria linariae)",
+    "description": "Produces brown-black spots with concentric rings on lower leaves first, spreading upwards with extensive yellowing around the spots.",
+    "prevention": [
+      "Mulch soil around plants to prevent soil-borne fungal spores from splashing onto foliage.",
+      "Prune the lowest leaves (bottom 12 inches) once plants are established to maximize airflow.",
+      "Apply copper fungicide or biofungicide (Bacillus subtilis) preventively.",
+      "Disinfect cages and stakes at the end of each growing season."
+    ]
+  },
+  "Tomato_Late_blight": {
+    "display_name": "Tomato - Late Blight",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Late Blight (Phytophthora infestans)",
+    "description": "Rapidly spreading greasy dark gray-brown patches on leaves and stems. Under humid conditions, white spore growth appears on the leaf undersides.",
+    "prevention": [
+      "Choose resistant varieties (e.g., Mountain Magic, Defiant PHR, Plum Regal).",
+      "Avoid overhead watering; use drip lines or soaker hoses.",
+      "Apply preventive fungicides prior to cool, rainy forecasts.",
+      "Immediately bag and remove severely infected plants; do not compost them."
+    ]
+  },
+  "Tomato_Leaf_Mold": {
+    "display_name": "Tomato - Leaf Mold",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Leaf Mold (Passalora fulva)",
+    "description": "Pale yellow patches appear on upper leaf surfaces while olive-green to velvet brown fungal spores develop directly beneath on the undersides.",
+    "prevention": [
+      "Reduce relative humidity inside greenhouses below 85% with adequate ventilation.",
+      "Increase plant spacing and prune suckers to promote air circulation.",
+      "Avoid wetting the foliage during watering.",
+      "Apply protective sulfur or copper fungicides when high humidity is sustained."
+    ]
+  },
+  "Tomato_Septoria_leaf_spot": {
+    "display_name": "Tomato - Septoria Leaf Spot",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Septoria Leaf Spot (Septoria lycopersici)",
+    "description": "Numerous small circular spots (1/8 inch) with dark brown margins and sunken grayish-white centers dotted with tiny black pycnidia (spore bodies).",
+    "prevention": [
+      "Remove diseased bottom leaves promptly to prevent the fungus from climbing.",
+      "Apply organic straw or plastic mulch to block soil splashing.",
+      "Spray chlorothalonil, copper, or potassium bicarbonate at first symptom appearance.",
+      "Rotate crops every 2-3 years away from solanaceous plants."
+    ]
+  },
+  "Tomato_Spider_mites_Two_spotted_spider_mite": {
+    "display_name": "Tomato - Spider Mites (Two-spotted)",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Two-Spotted Spider Mite (Tetranychus urticae)",
+    "description": "Tiny yellow or white speckling (stippling) on leaves, accompanied by fine silky webbing on leaf undersides. Severe infestations cause leaves to bronze and dry up.",
+    "prevention": [
+      "Spray insecticidal soap, horticultural neem oil, or sulfur on both sides of leaves.",
+      "Introduce beneficial predatory mites (Phytoseiulus persimilis) in controlled environments.",
+      "Maintain adequate soil hydration, as drought and dusty conditions accelerate mite reproduction.",
+      "Knock down populations with strong water sprays directed at the undersides of leaves."
+    ]
+  },
+  "Tomato__Target_Spot": {
+    "display_name": "Tomato - Target Spot",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Target Spot (Corynespora cassiicola)",
+    "description": "Pinpoint brown specks that expand into circular brown lesions with distinct concentric target rings and yellow halos.",
+    "prevention": [
+      "Keep plant canopies well pruned to encourage rapid drying after rains.",
+      "Ensure proper row orientation relative to prevailing winds.",
+      "Apply preventive fungicides labeled for Corynespora (e.g., azoxystrobin or mancozeb).",
+      "Destroy plant debris immediately after the final harvest."
+    ]
+  },
+  "Tomato__Tomato_YellowLeaf__Curl_Virus": {
+    "display_name": "Tomato - Yellow Leaf Curl Virus",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+    "description": "Severe upward curling and cupping of leaflets, marked yellowing (chlorosis) of margins, stunted bushy growth, and failure to set fruit.",
+    "prevention": [
+      "Control the primary insect vector: whiteflies (Bemisia tabaci) using yellow sticky traps and insecticidal sprays.",
+      "Use ultra-fine insect netting in nursery beds and greenhouses.",
+      "Plant TYLCV-resistant hybrids (such as Tycoon, Charger, or Red Snapper).",
+      "Remove and seal infected plants in plastic bags immediately upon detection."
+    ]
+  },
+  "Tomato__Tomato_mosaic_virus": {
+    "display_name": "Tomato - Mosaic Virus",
+    "crop": "Tomato",
+    "condition": "Diseased",
+    "disease": "Tomato Mosaic Virus (ToMV)",
+    "description": "Mottled light and dark green mosaic patterns on foliage, distorted 'shoestring' or fern-like leaf shapes, and reduced plant vigor.",
+    "prevention": [
+      "Wash hands thoroughly with soap or milk solution before handling plants (especially if using tobacco products).",
+      "Disinfect garden tools in a 10% household bleach solution between plants.",
+      "Select resistant tomato cultivars bearing the 'ToMV' or 'Tm-2' resistance gene.",
+      "Do not save seeds from infected plants; eradicate infected specimens without touching healthy neighbors."
+    ]
+  },
+  "Tomato_healthy": {
+    "display_name": "Tomato - Healthy Leaf",
+    "crop": "Tomato",
+    "condition": "Healthy",
+    "disease": "None (Healthy)",
+    "description": "Vigorous, rich green leaves with crisp margins and clean surfaces, indicating optimal photosynthetically active tissue.",
+    "prevention": [
+      "Water regularly at ground level to provide 1 to 2 inches of moisture per week.",
+      "Provide sturdy stakes or trellises to keep foliage off the ground.",
+      "Fertilize with phosphorus and potassium once flowering begins to promote sturdy fruit development.",
+      "Perform weekly inspections of lower foliage for early disease detection."
+    ]
+  }
+}
